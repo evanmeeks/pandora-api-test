@@ -48,6 +48,10 @@ class App extends Component {
 				console.log('======failure=======');
 				console.log(err);
 			});
+		var user = '';
+		var pass = '';
+		// var user = prompt('Pandora username', 'user');
+		// var pass = prompt('Pandora password', 'pass');
 
 		var reqBody = `{"existingAuthToken":null,"username":${user},"password":${pass},"keepLoggedIn":true}`;
 		fetch('/api/v1/auth/login', {
@@ -85,6 +89,10 @@ class App extends Component {
 			.catch(function(err) {
 				console.log('Fetch Error :-S', err);
 			});
+		var user = '';
+		var pass = '';
+		//var user = prompt('Pandora username', 'user');
+		//var pass = prompt('Pandora password', 'pass');
 
 		var reqBody = `{"existingAuthToken":null,"username":${user},"password":${pass},"keepLoggedIn":true}`;
 		fetch('https://pandora.com/api/v1/auth/login', {
